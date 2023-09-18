@@ -9,16 +9,11 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Dependencies
         run: npm install
-        with:
-          entrypoint: captain-vuetify
       - name: Build
         run: npm build
-        with:
-          entrypoint: captain-vuetify
       - name: Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          entrypoint: captain-vuetify
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CAPTAIN_A48AF }}'
           channelId: live
