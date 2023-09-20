@@ -16,6 +16,3 @@ const firebaseConfig = {
 };
 
 initializeApp(firebaseConfig);
-
-console.info("Env", import.meta.env)
-console.info("Loaded Firebase")
