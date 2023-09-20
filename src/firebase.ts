@@ -20,4 +20,5 @@ const app = initializeApp(firebaseConfig);
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const analytics = getAnalytics(app);
 
+console.info("Key", import.meta.env.VITE_FIREBASE_API_KEY)
 console.info("Loaded Firebase")
