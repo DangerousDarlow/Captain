@@ -3,8 +3,8 @@ import {initializeApp} from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// These firebase configuration values aren’t secret. They’re compiled into the distribution package and
-// downloaded by the client. Even so having them as searchable public text in GitHub seemed like a bad idea.
+// These firebase configuration values aren’t secret (they’re compiled into the distribution package)
+// but having them as searchable public text in GitHub seemed like a bad idea
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_AUTH_DOMAIN,
