@@ -3,17 +3,19 @@ import {initializeApp} from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+// These firebase configuration values aren’t secret. They’re compiled into the distribution package and
+// downloaded by the client. Even so having them as searchable public text in GitHub seemed like a bad idea.
 const firebaseConfig = {
-  apiKey: "AIzaSyCQ9xD3_pFwZzB4BtFKq_0GESP8I09VM58",
-  authDomain: "captain-a48af.firebaseapp.com",
-  projectId: "captain-a48af",
-  storageBucket: "captain-a48af.appspot.com",
-  messagingSenderId: "360444067221",
-  appId: "1:360444067221:web:3f8dd49a70985060674a9c",
-  measurementId: "G-QK3ERTVLXJ"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
 initializeApp(firebaseConfig);
 
-console.info("Key", import.meta.env.VITE_FIREBASE_API_KEY)
+console.info("Env", import.meta.env)
 console.info("Loaded Firebase")
